@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="BlueDuino.Views.HelpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlueDuino.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="12*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="2" ScrollViewer.IsHorizontalRailEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+            <TextBlock x:Name="HelpText" VerticalAlignment="Top" Margin="10,0,15,15" TextWrapping="Wrap" Style="{ThemeResource SubtitleTextBlockStyle}">
+                
+                <Bold FontWeight="SemiBold" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}">Step 1:</Bold> Turn on bluetooth from device settings and pair your serial bluetooth module e.g HC-05.<LineBreak></LineBreak><LineBreak></LineBreak>
+                <Bold FontWeight="SemiBold" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}">Step 2:</Bold> Open this app and connect your device from connection page.<LineBreak></LineBreak><LineBreak></LineBreak>
+                <Bold FontWeight="SemiBold" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}">Step 3:</Bold> Go to joystick page to control your bluetooth car/robot through virtual joystick!<LineBreak></LineBreak><LineBreak></LineBreak>
+                This app sends x,y cordinates whenever the joystick is moved, in a format like this: *X,Y#  where X and Y can vary from 0-255 (unsigned char).<LineBreak></LineBreak>For example, *255,33#<LineBreak></LineBreak><LineBreak></LineBreak>
+                You can also use bluetooth terminal to test your projects by sending raw data.
+            </TextBlock>
+        </ScrollViewer>
+    </Grid>
+
+
+</Page>

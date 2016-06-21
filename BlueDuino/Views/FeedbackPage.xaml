@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="BlueDuino.Views.FeedbackPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlueDuino.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <RelativePanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
+            <TextBlock Name="about" Style="{ThemeResource BodyTextBlockStyle}">
+            </TextBlock>
+
+            <TextBlock x:Name="textblock"  RelativePanel.Below="about" RelativePanel.AlignLeftWith="about" Margin="0,0,0,0">
+                Help us make this app better
+            </TextBlock>
+            <HyperlinkButton x:Name="mail" RelativePanel.Below="textblock" Margin="0,7,0,0" NavigateUri="mailto:eng_hassanakbar@hotmail.com">
+                Send feedback
+            </HyperlinkButton>
+        </RelativePanel>
+
+
+    </Grid>
+</Page>

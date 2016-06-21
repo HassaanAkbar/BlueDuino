@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="BlueDuino.Views.ConnectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlueDuino.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    
+    <Grid x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          EntranceNavigationTransitionInfo.IsTargetElement="True">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+
+        <RelativePanel Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
+            
+            <TextBlock Name="textblock"
+                       Style="{ThemeResource SubtitleTextBlockStyle}" 
+                       Margin="0,0,0,10"
+                       Text="Not connected" />
+
+            <TextBlock Margin="0,20,0,0" Style="{ThemeResource BodyTextBlockStyle}" RelativePanel.Below="comboBox" RelativePanel.AlignLeftWith="comboBox">
+                Supports Bluetooth serial devices only e.g HC-05
+            </TextBlock> 
+
+            <ComboBox Name="comboBox" RelativePanel.AlignLeftWith="textblock" RelativePanel.Below="textblock"
+                  IsSynchronizedWithCurrentItem="{x:Null}"
+                  Width="100"
+                  SelectionChanged="comboBox_SelectionChanged" 
+                  DropDownOpened="comboBox_DropDownOpened"/>
+            <ListBox Name="DevicesListBox"></ListBox>
+
+        </RelativePanel>
+        
+
+
+    </Grid>
+</Page>
